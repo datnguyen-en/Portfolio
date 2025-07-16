@@ -1,5 +1,5 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { Mailchimp } from "@/components";
+// import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL, blog, person, newsletter } from "@/resources";
 
@@ -38,7 +38,7 @@ export default function Blog() {
 				<Posts range={[2,3]} thumbnail/>
 				<Posts range={[4]} columns="2"/>
 			</Column>
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
+      {/* Removed Mailchimp subscribe section for a cleaner, portfolio-like look */}
     </Column>
   );
 }
