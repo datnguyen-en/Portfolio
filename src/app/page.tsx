@@ -2,9 +2,9 @@ import React from "react";
 
 import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, Meta, Schema } from "@once-ui-system/core";
 import { home, about, person, newsletter, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
+import AIChatbot from "@/components/AIChatbot";
 
 export default function Home() {
   return (
@@ -70,18 +70,54 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
-      {routes["/blog"] && (
-        <Flex fillWidth gap="24" mobileDirection="column">
-          <Flex flex={1} paddingLeft="l" paddingTop="24">
-            <Heading as="h2" variant="display-strong-xs" wrap="balance">
-              Latest from the blog
-            </Heading>
+      {/* --- New: Tech Stack Section --- */}
+      <RevealFx translateY="24" delay={0.8}>
+        <Column fillWidth maxWidth="s" gap="l" paddingY="32" horizontal="center" background="surface" radius="l" border="neutral-alpha-weak">
+          <Heading as="h2" variant="display-strong-m" wrap="balance" marginBottom="m">
+            Tech Stack
+          </Heading>
+          <Flex gap="16" wrap horizontal="center">
+            {/* Example: Add/replace with your real stack */}
+            <Avatar src="/images/projects/project-01/cover-02.jpg" size="l" />
+            <Avatar src="/images/projects/project-01/cover-04.jpg" size="l" />
+            <Avatar src="/images/projects/project-01/cover-03.jpg" size="l" />
+            <Avatar src="/images/avatar.jpg" size="l" />
           </Flex>
-          <Flex flex={3} paddingX="20">
-            <Posts range={[1, 2]} columns="2" />
-          </Flex>
+          <Text variant="body-default-m" onBackground="neutral-weak" align="center">
+            Next.js, TypeScript, Python, Node.js, Supabase, Figma, AI/ML, and more.
+          </Text>
+        </Column>
+      </RevealFx>
+      {/* --- New: Interactive Section (Stock Prediction/Chatbot) --- */}
+      <RevealFx translateY={28} delay={0.9}>
+        <Column fillWidth maxWidth="s" gap="l" paddingY="32" horizontal="center" background="surface" radius="l" border="neutral-alpha-weak">
+          <Heading as="h2" variant="display-strong-m" wrap="balance" marginBottom="m">
+            Try My AI Tools
+          </Heading>
+          <AIChatbot />
+        </Column>
+      </RevealFx>
+      {/* --- New: Open Source/Contributions Section --- */}
+      <RevealFx translateY="32" delay={1.0}>
+        <Column fillWidth maxWidth="s" gap="l" paddingY="32" horizontal="center" background="surface" radius="l" border="neutral-alpha-weak">
+          <Heading as="h2" variant="display-strong-m" wrap="balance" marginBottom="m">
+            Open Source & Community
+          </Heading>
+          <Text variant="body-default-m" onBackground="neutral-weak" align="center">
+            Contributor to open source projects and passionate about building tools for developers and sharing knowledge with the community.
+          </Text>
+        </Column>
+      </RevealFx>
+      <Flex fillWidth gap="24" mobileDirection="column">
+        <Flex flex={1} paddingLeft="l" paddingTop="24">
+          <Heading as="h2" variant="display-strong-xs" wrap="balance">
+            Latest from the blog
+          </Heading>
         </Flex>
-      )}
+        <Flex flex={3} paddingX="20">
+          <Posts range={[1, 2]} columns="2" />
+        </Flex>
+      </Flex>
       <Projects range={[2]} />
     </Column>
   );

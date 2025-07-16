@@ -9,7 +9,7 @@ const person = {
   role: "AI Software Engineer",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "Asia/Ho_Chi_Minh", // Valid IANA time zone for Vietnam
   languages: ["English", "Vietnamese", "Korean"], // optional: Leave the array empty if you don't want to display languages
 };
 
@@ -47,13 +47,13 @@ const home = {
   headline: <>Building bridges between design and code</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Recent project: <strong className="ml-4">AI Stock Predictor</strong></>,
+    href: "/work/ai-stock-predictor",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Eric, a Software engineer passionate about AI, automation, and building smart web apps.
+      <br /> After hours, I build my own projects and experiment with new tech.
     </>
   ),
 };
@@ -79,9 +79,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Eric is a Vietnam-based software engineer with a passion for building intelligent systems 
+        that simplify everyday life. His work bridges AI algorithms, backend architecture, and seamless 
+        user experiences—turning complex ideas into smart, usable solutions. 
       </>
     ),
   },
@@ -151,7 +151,7 @@ const about = {
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        description: <>Able to prototype in Figma and design developer-friendly UIs with speed.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -170,7 +170,7 @@ const about = {
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        description: <>Building next gen apps with Next.js, Supabase, and AI/ML integrations.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
